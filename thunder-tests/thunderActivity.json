@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "49ef1276-7afe-484c-9026-ffd5df6e1417",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:5000/api/signup",
+    "url": "https://localhost:5000/api/signup",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-29T13:49:00.582Z",
+    "modified": "2023-04-29T13:49:00.582Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"john doe\",\n  \"email\":\"jd@gmail.com\",\n  \"password\":\"292929292\",\n  \"role\":'user'\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2928e0ac-40f5-4515-8477-0c8135ea485a",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:5000/routes/signup",
+    "url": "https://localhost:5000/routes/signup",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-29T13:49:30.555Z",
+    "modified": "2023-04-29T13:49:30.555Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"john doe\",\n  \"email\":\"jd@gmail.com\",\n  \"password\":\"292929292\",\n  \"role\":'user'\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

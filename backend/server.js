@@ -7,7 +7,16 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const connectToDb = require("./db/index.js");
+// error middleware
+const errorHandler = require('./middleware/error');
 require("dotenv").config();
+const port = process.env.PORT || 5000;
+
+
+// importing routes
+const auth= require('./routes/auth');
+const postRoutes = require('./routes/postRoutes');
+
 
 // middleware
 app.use(morgan("dev"));
@@ -16,9 +25,17 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 app.use(cors());
 
-const port = process.env.PORT || 5000;
-dotenv.config();
 
+
+//routes middleware
+app.use('/api',auth);
+app.use('/api', postRoutes);
+
+//error middleware
+app.use(errorHandler);
+
+
+//connecting to Mongodb
 Promise.all([connectToDb()])
   .then(() =>
     app.listen(5000, () => console.log(`Blog is listening on port ${port}`))
