@@ -24,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.2",
     "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4",
     "yup": "^1.1.1"
   },
@@ -51,5 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:5000"
+  "proxy": "http://localhost:5000"
 }
